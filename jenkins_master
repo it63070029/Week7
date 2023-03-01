@@ -11,7 +11,7 @@ pipeline {
 
         stage('Tigger the Slave Jobs') {
             steps {
-                script {
+            script {
                     def file = readFile "./data.txt"
                     def lines = file.readLines()[0].split(' ')
                     env.name = lines[0]
@@ -22,4 +22,5 @@ pipeline {
             }
         }
     }
+}
 }
